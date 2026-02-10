@@ -1,13 +1,6 @@
-import dynamic from "next/dynamic"
-
-const MapClient = dynamic(() => import("./components/MapClient"), {
-  ssr: false
-})
+import MapWrapper from "./MapWrapper"
 
 export default function Home() {
-  return (
-    <div style={{ height: "100vh", width: "100vw" }}>
-      <MapClient />
-    </div>
-  )
+  return <MapWrapper />
 }
+
